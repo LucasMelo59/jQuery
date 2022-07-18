@@ -49,7 +49,7 @@ var ser = setInterval(function(){
 tempoR--;
 $("#tempo").text(tempoR);
 if(tempoR < 1) {
-campo.css("background-color", "lightgray");
+campo.addClass("campo-desativado");
 campo.attr("disabled",true)
 clearInterval(ser); // clearInterval recebe um parametro sendo este o id do set Interval que tem como função parar o setInterval
 }
