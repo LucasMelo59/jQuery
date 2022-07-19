@@ -49,23 +49,52 @@ var ser = setInterval(function(){
 tempoR--;
 $("#tempo").text(tempoR);
 if(tempoR < 1) {
-campo.addClass("campo-desativado");
-campo.attr("disabled",true)
 clearInterval(ser); // clearInterval recebe um parametro sendo este o id do set Interval que tem como função parar o setInterval
+finalizaJogo();
 }
 }, 1000);
 campo.attr("")
 //E por último, a função .attr(), como o próprio nome sugere é para alterar os atributos de elemento, como os atributos rows e col de uma textarea.
 });
 }
+var frase = $(".frase").text();
+campo.on("input", function() {
+var digitado = campo.val();
+var comparavel = frase.substr(0, digitado.length);
+if(digitado == comparavel) {
+console.log("oi")
+campo.addClass("campo-correto");
+campo.removeClass("campo-errado")
+}else {
+console.log("ola")
+campo.addClass("campo-errado");
+campo.removeClass("campo-correto")
+}
 
 
+
+
+})
 $("#botao-reiniciar").click(function() {
     campo.attr("disabled", false);
     campo.val("");
      $("#contador-palavras").text("0");
      $("#contador-caracters").text("0");
      $("#tempo").text(tempoInicial);
+     campo.toggleClass("campo-desativado");
       cronometro();
+      campo.removeClass("campo-correto")
+      campo.removeClass("campo-errado")
 })
+
+
+
+
+
+
+function finalizaJogo() {
+    inserePlacar();
+    campo.toggleClass("campo-desativado");
+    campo.attr("disabled",true)
+}
 

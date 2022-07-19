@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Jogo</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
@@ -12,22 +13,57 @@
     <h1 class="center">
         Digitador
     </h1>
-    <p class="frase center">a b c d</p>
+    <p class="frase center">Digite esta frase</p>
 
-    <ul class="informaçoes">
-        <li> <span id="tamanho-frase">30</span> palavras</li>
-        <li><span id="tempo" >10</span> segundos </li>
+    <ul class="informaçoes center">
+
+
+        <li>
+            <i class="material-icons icones">description</i>
+            <span id="contador-caracters">0</span> caracters
+        </li>
+        <li>
+            <i class="material-icons icones">flag</i>
+            <span id="contador-palavras">0</span> palavras
+        </li>
+        <li>
+            <i class="material-icons icones">flag</i>
+            <span id="tempo" >10</span> segundos
+        </li>
     </ul>
     <textarea class="campo-digitacao" rows="8" cols="40" ></textarea>
-    <button id="botao-reiniciar" >Reiniciar jogo</button>
 
-    <ul class="center">
-        <li><span id="contador-caracters">0</span> caracters</li>
-        <li><span id="contador-palavras">0</span> palavras</li>
-    </ul>
+
+    <div>
+        <a id="botao-reiniciar" class="waves-effect waves-light btn-large"><i class="material-icons left">history</i>Reload</a>
+        <a class="waves-effect waves-light btn-large"><i class="material-icons left">description</i>skksadka</a>
+        <a class="waves-effect waves-light btn-large"><i class="material-icons left">filter_drama</i>sadksakdask</a>
+
+    </div>
+
+    <section class="placar">
+    <h3 class="center">Placar</h3>
+        <table class="centered bordered" >
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>N de palavras</th>
+                    <th>Remover</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                
+            </tbody>
+
+        </table>
+
+    </section>
 </div>
 
 <script src="js/jquery.js" ></script>
+<script src="js/materialize.min.js"></script> 
 <script src="js/main.js"></script>
+<script src="js/placar.js"></script>
 </body>
 </html>
