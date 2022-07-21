@@ -6,7 +6,7 @@ function inserePlacar() {
     var linha = novaLinha(usuario, numPalavras);
     linha.find(".botao-remover").click(removeLinha);
     
-       tabela.append(linha, numPalavras);  // append adiociona dps na tabela
+       tabela.append(linha);  // append adiociona dps na tabela
        // tabela.prepend(linha) adiociona antes na tabela
    
    }
